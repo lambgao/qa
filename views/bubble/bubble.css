@@ -1,0 +1,52 @@
+body{background-color: #D9E9FF;}
+/*  Bubbles formatting */
+ol.bubblelist-blue {
+	list-style: none;
+	margin: 0;
+}
+ol.bubblelist-blue li .bubble  {
+	width: 401px;
+	background-color: #ACD9F4;
+	position:relative;
+	left: 150px;
+}
+
+ol.bubblelist-blue li .bubble .bubbletop  {
+	background-image: url(images/bubble_blue_top_r.jpg);
+	width: 401px;
+	height:15px;
+	padding:0;
+	margin:0;
+}
+ol.bubblelist-blue li .bubble .bubblemiddle  {
+	width: 371px;
+	padding-left: 15px;
+	padding-right:15px;
+}
+ol.bubblelist-blue li .bubble .bubblemiddle p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+ol.bubblelist-blue li .bubble .bubblebottom  {
+	background-image: url(images/bubble_blue_bottom_r.jpg);
+	width: 401px;
+	height:30px;
+}
+ol.bubblelist-blue li.alt .bubble  {
+	width: 401px;
+	background-color: #C1E2F9;
+	position:relative;
+	left: 60px;
+}
+ol.bubblelist-blue li.alt .bubble .bubbletop{
+	background-image: url(images/bubble_blue_top_l.jpg);
+	width: 401px;
+	height:15px;
+}
+ol.bubblelist-blue li.alt .bubble .bubblebottom  {
+	background-image: url(images/bubble_blue_bottom_l.jpg);
+	width: 401px;
+	height:30px;
+}
+/* End Bubbles formatting */
