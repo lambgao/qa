@@ -24,9 +24,9 @@ ol.bubblelist-blue li .bubble .bubblemiddle  {
 	padding-right:15px;
 }
 ol.bubblelist-blue li .bubble .bubblemiddle p {
-    font-size: 12px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 ol.bubblelist-blue li .bubble .bubblebottom  {
 	background-image: url(images/bubble_blue_bottom_r.jpg);
