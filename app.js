@@ -25,4 +25,4 @@ app.all('/views/*.(html|css|js|jpg|png){1}', function(req, res, next){
 });
 app.listen(port);
 console.log(module.paths);
-console.log('Server running at http://127.0.0.1:'+port+'/'); 
+console.log('Server running at http://127.0.0.1:'+port+'/');
