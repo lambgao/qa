@@ -12,7 +12,7 @@ app.get('/index', function (req, res) {
     res.render('index', {
         locals:{ pagetitle:'中文' }
     });
-    console.log("hahas");
+    console.log("index");
 });
 app.all('/views/*.(html|css|js|jpg|png){1}', function(req, res, next){
     var realpath = __dirname + url.parse(req.url).pathname;
@@ -24,3 +24,5 @@ app.all('/views/*.(html|css|js|jpg|png){1}', function(req, res, next){
     }
 });
 app.listen(port);
+console.log(module.paths);
+console.log('Server running at http://127.0.0.1:'+port+'/'); 
