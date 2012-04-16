@@ -1,28 +1,32 @@
+var config = require('./config').config;
 var express = require('express');
-var port = 10080;
 var app = express.createServer();
+var router = require('./router');
 var path = require('path');
-var fs = require('fs');
-var url = require('url');
 
-app.set('view engine', 'jade');
-app.set('view options', {layout:false});
+// configuration in all env
+app.configure(function() {
+	app.set('view engine', 'jade');
+	app.set('view options', {layout:false});
+	app.use(app.router);
+});
 
-app.get('/index', function (req, res) {
-    res.render('index', {
-        locals:{ pagetitle:'中文' }
-    });
-    console.log("index");
+var static_dir = path.join(__dirname, 'public');
+app.configure('development', function(){
+	app.use(express.static(static_dir));
+	app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 });
-app.all('/views/*.(html|css|js|jpg|png){1}', function(req, res, next){
-    var realpath = __dirname + url.parse(req.url).pathname;
-    console.log(realpath);
-    if(path.existsSync(realpath)){
-        res.end(fs.readFileSync(realpath));
-    }else{
-        res.end('Cannot find request static file: '+req.url);
-    }
+
+app.configure('production', function(){
+	var maxAge = 31557600000;//one year
+	app.use(express.static(static_dir, { maxAge: maxAge }));
+	app.use(express.errorHandler()); 
+	app.set('view cache', true);
 });
-app.listen(port);
-console.log(module.paths);
-console.log('Server running at http://127.0.0.1:'+port+'/');
+
+// router
+router(app);
+
+app.listen(config.port);
+console.log("Mynah listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log('Server running at http://127.0.0.1:'+app.address().port);

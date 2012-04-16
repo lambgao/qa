@@ -3,8 +3,8 @@
   "version": "0.0.0", 
   "main": "./app.js", 
   "dependencies": {
-    "express": "2.5.9",
-    "jade": "0.22.1",
+    "express": "2.5.1",
+    "jade": "0.24.0",
     "mongous": "0.2.2"
   }
 }
