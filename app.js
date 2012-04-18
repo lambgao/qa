@@ -8,7 +8,6 @@ var path = require('path');
 app.configure(function() {
 	app.set('view engine', 'jade');
 	app.set('view options', {layout:false});
-	app.use(app.router);
 });
 
 var static_dir = path.join(__dirname, 'public');
@@ -20,7 +19,7 @@ app.configure('development', function(){
 app.configure('production', function(){
 	var maxAge = 31557600000;//one year
 	app.use(express.static(static_dir, { maxAge: maxAge }));
-	app.use(express.errorHandler()); 
+	app.use(express.errorHandler());
 	app.set('view cache', true);
 });
 
@@ -28,5 +27,5 @@ app.configure('production', function(){
 router(app);
 
 app.listen(config.port);
-console.log("Mynah listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log("%s listening on port %d in %s mode", config.name, app.address().port, app.settings.env);
 console.log('Server running at http://127.0.0.1:'+app.address().port);
