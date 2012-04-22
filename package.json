@@ -4,7 +4,7 @@
   "main": "./app.js", 
   "dependencies": {
     "express": "2.5.1",
-    "jade": "0.24.0",
-    "mongous": "0.2.2"
+    "jade": "0.25.0",
+    "mongoose": "2.5.13"
   }
 }
