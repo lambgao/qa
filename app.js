@@ -2,6 +2,7 @@ var config = require('./config').config;
 var express = require('express');
 var app = express.createServer();
 var router = require('./router');
+var binder = require('./binder');
 var path = require('path');
 
 // configuration in all env
@@ -23,6 +24,7 @@ app.configure('production', function(){
 	app.set('view cache', true);
 });
 
+binder(config.db);
 // router
 router(app);
 
