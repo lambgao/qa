@@ -50,3 +50,13 @@ ol.bubblelist-blue li.alt .bubble .bubblebottom  {
 	height:30px;
 }
 /* End Bubbles formatting */
+/*  Others formatting */
+.text{
+	width: 366px;
+	height: 126px;
+}
+.send{
+	position: relative;
+	left: 450px;
+}
+/* End Others formatting */
