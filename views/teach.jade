@@ -1,9 +1,8 @@
 !!! 5
 html
   head
-    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
     title='Insert title here'
-    link(href="css/bubble.css", rel="stylesheet", type="text/css")
+    include head
   body
     ol.bubblelist-blue
       li.alt
@@ -18,4 +17,5 @@ html
           div.bubblemiddle
             textarea#answer.text(name="answer")
           div.bubblebottom
-        input.send(type="button",value="发送")
+        input.send.btn.btn-primary(type="button",value=" 发 送 ")
+    include ga
