@@ -5,13 +5,8 @@
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>org.nodeclipse.ui.nodejsBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.nodeclipse.ui.nodejsNature</nature>
+		<nature>org.nodeclipse.ui.NodejsNature</nature>
 	</natures>
 </projectDescription>
