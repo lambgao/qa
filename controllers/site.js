@@ -17,18 +17,3 @@ exports.testdb = function(req,res,next){
 		});
 	});
 };
-
-exports.teach = function(req,res,next){
-	res.render('teach', {
-		locals:{ "pagetitle": "中文" }
-	});
-	console.log("teach");
-};
-
-exports.bubble = function(req,res,next){
-	res.render('bubble', {
-		locals:{ "pagetitle": "中文" }
-	});
-	console.log("bubble");
-};
-
