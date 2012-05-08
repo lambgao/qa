@@ -37,13 +37,17 @@ $(document).ready(function() {
                 },
                 success : function(result) {
                     if(result.status > 0){
-                        var even = even_html.replace("question", "黑鸟：" + question);
-                        var alt = alt_html.replace("answer", "我：" + result.corpus.answer)
+                        var even = even_html.replace("question", "我：" + question);
+                        var alt = alt_html.replace("answer", "黑鸟：" + result.corpus.answer)
                         $(even).insertBefore(last);
                         $(alt).insertBefore(last);
                         $("#question").val("");
                     }else {
-                        alert(result.status + "" + result.corpus.answer);
+                        var even = even_html.replace("question", "我：" + question);
+                        var alt = alt_html.replace("answer", "黑鸟：" + "我不知道o(︶︿︶)o 唉...")
+                        $(even).insertBefore(last);
+                        $(alt).insertBefore(last);
+                        $("#question").val("");
                     }
                 }
             });
