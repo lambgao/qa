@@ -15,7 +15,7 @@ html
         div.bubble
           div.bubbletop
           div.bubblemiddle
-            p 别人对你有各种期望，你会不会有压力 ?
+            p 我：别人对你有各种期望，你会不会有压力 ?
           div.bubblebottom
       li.alt
         div.bubble
@@ -23,11 +23,11 @@ html
           div.bubblemiddle
             p 黑鸟：我很庆幸我过的日子, 是我自己想过的日子, 而不是别人想要我过的日子。 别人想过什么样的日子,他们自己去过就好了，轮不到我来替他们过...
           div.bubblebottom
-      li.even
+      li#last.even
         div.bubble
           div.bubbletop
           div.bubblemiddle
-            textarea#answer.text(name="answer")
+            textarea#question.text(name="question")
           div.bubblebottom
-        input.send.btn.btn-primary.btn-large(type="button",value="   发  送   ")
+        input#bubble.send.btn.btn-primary.btn-large(type="button",value="   发  送   ")
     include ga

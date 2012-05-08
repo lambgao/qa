@@ -10,4 +10,5 @@ exports = module.exports = function(app) {
 	app.all('/teach', teach.teach);
 	app.all('/teacher/:question/:answer', teach.teacher);
 	app.all('/bubble', bubble.bubble);
+	app.all('/bubbler/:question', bubble.bubbler);
 };
