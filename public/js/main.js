@@ -15,6 +15,8 @@ $(document).ready(function() {
 	                alert('发送失败');
 	            },
 	            success : function(result) {
+	                $("#question").val("");
+	                $("#answer").val("");
 	                //alert(result.status);
 	            }
 	        });

@@ -9,6 +9,7 @@ exports.config = {
 	"version": '0.0.0',
 	"port": 80,
 	"db":'127.0.0.1:27017/test?auto_reconnect=true&poolSize=5'
+	//"db":'dXbUmO3lYOiL:NrCQylPixH@127.0.0.1:20088/CgDkGkDG4snc?auto_reconnect=true&poolSize=5'
 }
 
 var db = exports.config.db;
