@@ -24,6 +24,7 @@ app.configure('production', function(){
 	app.set('view cache', true);
 });
 
+//binder
 binder(config.db);
 // router
 router(app);
