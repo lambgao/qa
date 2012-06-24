@@ -7,6 +7,6 @@
 	<buildSpec>
 	</buildSpec>
 	<natures>
-		<nature>org.nodeclipse.ui.NodejsNature</nature>
+		<nature>org.nodeclipse.ui.NodeNature</nature>
 	</natures>
 </projectDescription>
